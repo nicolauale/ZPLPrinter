@@ -8,14 +8,14 @@
       <Method>TCP</Method>
     </Folder>
     <Folder>
-      <Name>c:\temp\PANDISC</Name>
-      <Printer>\\127.0.0.1\PRN</Printer>
+      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\pan14_S4M</Name>
+      <Printer>\\pan14\S4m</Printer>
       <Port></Port>
       <Method>Copy</Method>
     </Folder>
     <Folder>
-      <Name>c:\temp\PANDISC2</Name>
-      <Printer>\\127.0.0.1\PRN</Printer>
+      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\TEST</Name>
+      <Printer>ZDesigner S4M-203dpi ZPL</Printer>
       <Port></Port>
       <Method>Print</Method>
     </Folder>
