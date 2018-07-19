@@ -2,20 +2,8 @@
 <FolderCollection>
   <Folders>
     <Folder>
-      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\HDD_03_S4M</Name>
-      <Printer>127.0.0.1</Printer>
-      <Port>9100</Port>
-      <Method>TCP</Method>
-    </Folder>
-    <Folder>
-      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\pan14_S4M</Name>
-      <Printer>\\pan14\S4m</Printer>
-      <Port></Port>
-      <Method>Copy</Method>
-    </Folder>
-    <Folder>
-      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\TEST</Name>
-      <Printer>ZDesigner S4M-203dpi ZPL</Printer>
+      <Name>C:\temp\print</Name>
+      <Printer>Canon iR-ADV C3325/3330 UFR II</Printer>
       <Port></Port>
       <Method>Print</Method>
     </Folder>

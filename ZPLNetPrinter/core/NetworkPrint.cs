@@ -26,7 +26,7 @@ namespace ZPLNetPrinter
             {
                 // Cria as classes de leitura do XML
                 XmlSerializer serializer = new XmlSerializer(typeof(FolderCollection));
-                StreamReader reader = new StreamReader(Environment.CurrentDirectory + "\\zplnetconfig.xml");
+                StreamReader reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"zplnetconfig.xml"));
                 // ---
 
                 // Lê o XML de configuração com as pastas a serem verificadas
@@ -65,7 +65,7 @@ namespace ZPLNetPrinter
                     foreach (string fileName in fileEntries)
                     {
                         // Verifica se a extensão do arquivo é TXT
-                        if (Path.GetExtension(fileName).ToLower() == "txt")
+                        if (Path.GetExtension(fileName).ToLower() == ".txt")
                         {
                             // Move o arquivo para a pasta de Processado
                             targetFolder = "Processado";
@@ -74,7 +74,7 @@ namespace ZPLNetPrinter
                             switch (folder.Method)
                             {
                                 case "Print":
-                                    var resultPrint = SendDataPrinter(folder.Printer, Path.Combine(folder.Name, fileName));
+                                    var resultPrint = SendDataPrinter(folder.Printer, fileName);
 
                                     // Verifica se houve erro na impressão por TCP
                                     if (!resultPrint.Item1)
@@ -86,7 +86,7 @@ namespace ZPLNetPrinter
 
                                     break;
                                 case "TCP":
-                                    var resultTCP = SendDataTCP(folder.Printer, Convert.ToInt32(folder.Port), Path.Combine(folder.Name, fileName));
+                                    var resultTCP = SendDataTCP(folder.Printer, Convert.ToInt32(folder.Port), fileName);
 
                                     // Verifica se houve erro na impressão por TCP
                                     if (!resultTCP.Item1)
@@ -99,7 +99,7 @@ namespace ZPLNetPrinter
                                     break;
                                 case "Copy":
                                     // Copia o arquivo a ser impresso diretamente na porta da impressora
-                                    var resultCopy = CopyFileTo(folder.Name, folder.Printer, folder.Name, false, true);
+                                    var resultCopy = CopyFileTo(folder.Name, folder.Printer, Path.GetFileName(fileName), false, true);
 
                                     // Verifica se houve erro na cópia
                                     if (!resultCopy.Item1)
@@ -124,7 +124,7 @@ namespace ZPLNetPrinter
                         }
 
                         // Move o arquivo para a pasta de acordo com a ocorrência acima
-                        CopyFileTo(folder.Name, targetFolder, fileName, true);
+                        CopyFileTo(folder.Name, targetFolder, Path.GetFileName(fileName), true);
                     }
                     // --- (Fim do Loop nos arquivos da pasta)
                 }
@@ -144,7 +144,7 @@ namespace ZPLNetPrinter
         {
             bool   bResult = true;
             string sResult = "";
-            string pathSep = Path.PathSeparator.ToString();
+            string pathSep = Path.DirectorySeparatorChar.ToString();
 
             // Corrige o final do path com a barra ("\")
             if (!fromFolder.EndsWith(pathSep)) { fromFolder += pathSep; }
@@ -175,7 +175,7 @@ namespace ZPLNetPrinter
                 fromFolder = Path.Combine(fromFolder, fileName);
 
                 // Copia o arquivo para a pasta destino
-                File.Copy(fromFolder, toFolder);
+                File.Copy(fromFolder, toFolder, true);
 
                 // Verifica se precisa excluir o arquivo destino
                 if (deleteSource) { File.Delete(fromFolder); }
@@ -250,7 +250,7 @@ namespace ZPLNetPrinter
             // Retorna o resultado do método
             return new Tuple<bool, string>(bResult, sResult);
         }
-        private Tuple<bool, string> SendDataPrinter(string Printer, string fileName)
+        private Tuple<bool, string> SendDataPrinter(string printerName, string fileName)
         {
             bool bResult = true;
             string sResult = "";
@@ -264,8 +264,8 @@ namespace ZPLNetPrinter
                     // Faz a leitura completa do arquivo a ser impresso
                     string sData = File.ReadAllText(fileName);
 
-                    // Cria o objeto de comunicação com a impressora
-                    RawPrinterHelper.SendStringToPrinter(Printer, sData);
+                    // Cria o objeto de comunicação com a impressora   
+                    RawPrinterHelper.SendStringToPrinter(printerName, sData);
                 }
                 catch (Exception e)
                 {

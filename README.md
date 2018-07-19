@@ -5,7 +5,7 @@ Serviço Windows para monitoramento de arquivos em formato ZPL e emissão em imp
 
 ## Preparação
 
-Copie o arquivo "zplnetconfig.xml" para a pasta "c:\windows\system32", para que o serviço posso acessa-lo. Nesse arquivo devem conter as configurações.
+Verifique o arquivo "zplnetconfig.xml" na pasta onde encontra-se o executável, para que o serviço posso acessa-lo. Nesse arquivo devem conter as configurações.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
