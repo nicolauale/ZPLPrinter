@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FolderCollection>
+  <Folders>
+    <Folder>
+      <Name>c:\TOTVS\TOTVS12_Homolog\Protheus_Data\Etiquetas\HDD_03_S4M</Name>
+      <Printer>127.0.0.1</Printer>
+      <Port>9100</Port>
+      <Method>TCP</Method>
+    </Folder>
+    <Folder>
+      <Name>c:\temp\PANDISC</Name>
+      <Printer>\\127.0.0.1\PRN</Printer>
+      <Port></Port>
+      <Method>Copy</Method>
+    </Folder>
+    <Folder>
+      <Name>c:\temp\PANDISC2</Name>
+      <Printer>\\127.0.0.1\PRN</Printer>
+      <Port></Port>
+      <Method>Print</Method>
+    </Folder>
+  </Folders>
+</FolderCollection>

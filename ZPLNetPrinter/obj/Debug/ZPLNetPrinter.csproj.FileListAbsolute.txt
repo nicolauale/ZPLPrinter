@@ -1,0 +1,11 @@
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\bin\Debug\ZPLNetPrinter.exe.config
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\bin\Debug\ZPLNetPrinter.exe
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\bin\Debug\ZPLNetPrinter.pdb
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.ZPLNetPtrinter.resources
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.csproj.GenerateResource.cache
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.csproj.CoreCompileInputs.cache
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.exe
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.pdb
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.csprojAssemblyReference.cache
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\obj\Debug\ZPLNetPrinter.ProjectInstaller.resources
+C:\PROJETOS\Csharp\ZPLPrinter\ZPLNetPrinter\bin\Debug\zplnetconfig.xml
