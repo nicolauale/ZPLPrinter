@@ -21,7 +21,7 @@ Copie o arquivo "zplnetconfig.xml" para a pasta "c:\windows\system32", para que 
       <Name>C:\\MONITOR\\PRN2</Name>
       <Printer>192.168.2.14</Printer>
       <Port>6100</Port>
-	  <Method>TCP</Method>
+      <Method>TCP</Method>
     </Folder>
   </Folders>
 </FolderCollection>
