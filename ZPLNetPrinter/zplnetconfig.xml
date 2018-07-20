@@ -3,9 +3,9 @@
   <Folders>
     <Folder>
       <Name>C:\temp\print</Name>
-      <Printer>Canon iR-ADV C3325/3330 UFR II</Printer>
-      <Port></Port>
-      <Method>Print</Method>
+      <Printer>200.174.16.201</Printer>
+      <Port>9100</Port>
+      <Method>TCP</Method>
     </Folder>
   </Folders>
 </FolderCollection>
